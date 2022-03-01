@@ -1,0 +1,14 @@
+model_name: "TransE"
+datasets:
+        - dataset: "add_cons_drop_dup"
+          parameters:
+                  learning_rate: 0.01
+                  hidden_size: 50
+                  l1_flag: True
+                  margin: 1.00
+                  batch_size: 2048
+                  epochs: 500
+                  optimizer: "adam"
+                  sampling: "bern"
+                  neg_rate: 1
+                  device: cuda
