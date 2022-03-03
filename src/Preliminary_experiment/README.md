@@ -10,9 +10,11 @@
 
 ## 単語の分散表現
 https://github.com/shiroyagicorp/japanese-word2vec-model-builder
-より、事前学習済みWord2vecモデルをダウンロードすることで、
-embedding_rel.ipynbにおける単語の分散表現の獲得を実施する。
+より、学習済みWord2vecモデルをダウンロードすることで、
+[src/Preliminary_experiment/embedding_rel.ipynb](embedding_rel.ipynb)における、
+単語の分散表現を実行することが出来る。
 
 ## 階層型クラスタリング
-獲得した単語の分散表現を用いて、clustering.ipynbより、
-階層型クラスタリングの結果を獲得することができる。
+獲得した単語の分散表現を用いて、
+[src/Preliminary_experiment/clustering.ipynb](clustering.ipynb)
+で階層型クラスタリングの結果を獲得することができる。
