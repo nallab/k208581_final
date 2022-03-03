@@ -1,6 +1,6 @@
 # 予備実験手順方法
 ## データの抽出と前処理
-access_DB.py では、SPARQLWrapper ライブラリを利用したSPARQL抽出クエリを実行することで、都道府県データを抽出した。
+[src/Preliminary_experiment/access_DB.py](access_DB.py) では、SPARQLWrapper ライブラリを利用したSPARQL抽出クエリを実行することで、都道府県データを抽出した。
 
 その後、embedding_rel.ipynbにて、意味リンクの要素から画像などの利用しない情報や、
 サブカテゴリ情報を省くことで、Word2vecに利用可能な情報への前処理を実施した。
