@@ -2,10 +2,11 @@
 ## データの抽出と前処理
 [src/Preliminary_experiment/access_DB.py](access_DB.py) では、SPARQLWrapper ライブラリを利用したSPARQL抽出クエリが記述されている。
 今回は都道府県データの抽出を行うため、[src/Preliminary_experiment/prefecture.csv](prefecture.csv) に都道府県名を準備し、
-その都道府県名をSPARQL抽出クエリの入力値としてデータ抽出の制御を行なっている。()
+その都道府県名をSPARQL抽出クエリの入力値としてデータ抽出の制御を行なっている。
 
-その後、embedding_rel.ipynbにて、意味リンクの要素から画像などの利用しない情報や、
-サブカテゴリ情報を省くことで、Word2vecに利用可能な情報への前処理を実施した。
+[src/Preliminary_experiment/access_DB.py](access_DB.py)の実行後、
+[src/Preliminary_experiment/embedding_rel.ipynb](embedding_rel.ipynb)にて、
+意味リンクの要素から画像などの利用しない情報や、サブカテゴリ情報を省くなどのWord2vecに対応する形式への前処理を実施している。
 
 ## 単語の分散表現
 https://github.com/shiroyagicorp/japanese-word2vec-model-builder
