@@ -40,11 +40,13 @@ pykg2vec-train -exp True -mn TransE -ds add_cons_drop_dup -dsp {data_dir_path} -
 ```
 
 獲得したナレッジグラフの分散表現には、DBpedia Japaneseの全てのデータの分散表現が格納されているので、
-それらの中から単語の分散表現で
-\url{https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/embedding_rel.ipynb}
+それらの中から単語の分散表現で利用したデータの絞り込みや、意味リンクの分散表現の獲得を
+[embedding_rel.ipynb](https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/embedding_rel.ipynb)
 にて実施している。
 
 ## 階層型クラスタリング
 獲得したナレッジグラフの分散表現を用いて、
-\url{https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/clustering.ipynb}
+[clustering.ipynb](https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/clustering.ipynb)
 より、階層型クラスタリングの結果を獲得することができる。
+
+また、[vec性能.ipynb](src/Knowledge_Graph/vec性能.ipynb)で、単語の分散表現とナレッジグラフの分散表現のベクトル性能の検証を行なっている。
