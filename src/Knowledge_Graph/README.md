@@ -29,17 +29,18 @@ add\_cons\_drop\_dup.txtをベースに、
 のセットアップ準備も実施している。
 
 セットアップ準備の終了後、
-\url{https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/Hyperparameters/TransE.yaml}
-のように、ナレッジグラフ分散表現で利用したいハイパーパラメータの記述ファイルを用意する。
+[TransE.yaml](https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/Hyperparameters/TransE.yaml)
+にて、ナレッジグラフ分散表現で利用するハイパーパラメータの記述ファイルを用意する。
 
-最後に、\ref{transe}を実行することでナレッジグラフの分散表現を獲得することができる。
-\begin{lstlisting}[caption=TransEの実行, label=transe]
-pykg2vec-train -exp True -mn TransE -ds add_cons_drop_dup -dsp {data_dir_path} -hpf {hyperparameter_file} -device cuda
-\end{lstlisting}
+その後、以下のコマンドをDockerfileを用いて作成した環境にて実行することで、
+ナレッジグラフの分散表現を獲得することができる。
 
-獲得したナレッジグラフの分散表現は、
-全データの分散表現のため、
-単語の分散表現と比較するためのデータ範囲などの抽出を
+```
+pykg2vec-train -exp True -mn TransE -ds add_cons_drop_dup -dsp {data_dir_path} -hpf {hyperparameter_file} -device {cpu, or cuda}
+```
+
+獲得したナレッジグラフの分散表現には、DBpedia Japaneseの全てのデータの分散表現が格納されているので、
+それらの中から単語の分散表現で
 \url{https://github.com/nallab/k208581_final/blob/main/src/Knowledge_Graph/embedding_rel.ipynb}
 にて実施している。
 
