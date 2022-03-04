@@ -36,7 +36,8 @@ add\_cons\_drop\_dup.txtをベースに、
 ナレッジグラフの分散表現を獲得することができる。
 
 ```
-pykg2vec-train -exp True -mn TransE -ds add_cons_drop_dup -dsp {data_dir_path} -hpf {hyperparameter_file} -device {cpu, or cuda}
+pykg2vec-train -exp True -mn TransE -ds add_cons_drop_dup -dsp {data_dir_path} \\
+  -hpf {hyperparameter_file} -device {cpu, or cuda}
 ```
 
 獲得したナレッジグラフの分散表現には、DBpedia Japaneseの全てのデータの分散表現が格納されているので、
